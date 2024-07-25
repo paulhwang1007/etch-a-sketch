@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+div#container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 960px;
+    width: 960px;
+}
+
+/* Selects all divs that are children of #container */
+#container > div#grid {
+    border: 1px solid black;
+    height: 60px;
+    width: 60px;
+    margin: 0;
+}
+
+/* Selects every div that is the (17n + 1)th child of #container
+meaning it selects every 18th div of each row */
+/* #container > div:nth-child(17n + 1) { */
+    /* expands that div to fill the rest of the screen
+    so that the rest of the grid stays fixed */
+
+    /* The 1st, 18th, etc divs are used to fill the whole width of the
+    screen with no height so they don't show in the grid, but it is just
+    a way to maintain a fixed 16x16 grid while using flex wrap;
+    tried using other things but wrap makes it annoying */
+    /* width: 100%;
+    border: 0;
+    height: 0;
+} */
+
+.bg-black {
+    background-color: black;
+}
